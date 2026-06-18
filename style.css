@@ -43,7 +43,32 @@ div{
   padding: 2px;
 }
 
+/* --- Media Query #1: Tablet View (772px and up) --- */
+@media screen and (min-width: 772px) {
+    div {
+        /* Set div widths to 45% of the viewport width */
+        width: 45vw; 
+        display: inline-block;
+        vertical-align: top; /* Keeps divs aligned nicely if text heights differ */
+    }
 
+    div img {
+        /* Override base fixed 150px layout to let images scale responsively */
+        width: 100%; 
+        height: auto;
+        /* Constrain maximum height to 30% of the viewport height */
+        max-height: 30vh; 
+        object-fit: contain; /* Ensures images don't stretch unnaturally */
+    }
+}
+
+/* --- Media Query #2: Large Screen View (998px and up) --- */
+@media screen and (min-width: 998px) {
+    div {
+        /* Change the layout so divs take up 30% of the viewport width */
+        width: 30vw;
+    }
+}
 
 
 
